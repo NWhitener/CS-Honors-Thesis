@@ -8,7 +8,7 @@ from sklearn.metrics import log_loss
 import utils
 itteration = 1
 if __name__ == "__main__":
-    # Load MNIST dataset from https://www.openml.org/d/554
+    # Load Kidney data for Client 2
     (X_train, y_train), (X_test, y_test) = utils.load_kidney_single(2)
     print(len(X_train))
     # Split train set into 10 partitions and randomly use one for training.
