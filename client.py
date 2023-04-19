@@ -10,12 +10,12 @@ import time
 itteration = 1
 
 if __name__ == "__main__":
-    # Load MNIST dataset from https://www.openml.org/d/554
- 
+
+    #Load the Kidney data for patient 1 
     (X_train, y_train), (X_test, y_test) = utils.load_kidney_single(1)
     print(len(X_train))
 
-    # Split train set into 10 partitions and randomly use one for training.
+    # Split train set into 20 partitions and randomly use one for training.
     partition_id = np.random.choice(itteration)
     (X_train, y_train) = utils.partition(X_train, y_train, itteration)[partition_id]
     itteration += 1 
